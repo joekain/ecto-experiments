@@ -12,4 +12,19 @@ defmodule EeTest do
       description: "And object for the test"
     }
   end
+
+  test "we can insert object records and query them back" do
+    title = "Queryable title"
+
+    object = Ee.Repo.insert! %Ee.Object{
+      title: title,
+      description: "And object for the test"
+    }
+
+    found = Ee.Object.find_by_title(title)
+    |> Ee.Repo.all
+
+    assert Enum.count(found) == 1
+    assert List.first(found).id == object.id
+  end
 end
