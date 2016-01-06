@@ -5,6 +5,7 @@ defmodule Ee.Object do
   schema "object" do
     field :title, :string
     field :description, :string
+    field :date, Ecto.DateTime
 
     # has_many :available_date_ranges, Project.AvailableDateRange, on_replace: :delete
 
@@ -13,5 +14,9 @@ defmodule Ee.Object do
 
   def find_by_title(title) do
     from object in Ee.Object, where: object.title == ^title
+  end
+
+  def find_by_date(date) do
+    from object in Ee.Object, where: object.date == ^date
   end
 end
