@@ -6,6 +6,7 @@ defmodule Ee.Object do
     field :title, :string
     field :description, :string
     field :date, Ecto.DateTime
+    field :timex, Timex.Ecto.DateTimeWithTimezone
 
     # has_many :available_date_ranges, Project.AvailableDateRange, on_replace: :delete
 
