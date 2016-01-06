@@ -14,7 +14,7 @@ defmodule Ee.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :postgrex, :ecto],
+    [applications: [:logger, :postgrex, :ecto, :tzdata, :timex],
      mod: {Ee, []}]
   end
 
@@ -31,6 +31,8 @@ defmodule Ee.Mixfile do
     [
       {:postgrex, ">= 0.0.0"},
       {:ecto, "~> 1.0"},
+      {:timex, "~> 1.0"},
+      {:timex_ecto, "~> 0.7"}
     ]
   end
 end
