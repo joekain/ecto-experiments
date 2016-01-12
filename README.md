@@ -1,20 +1,3 @@
 # Ee
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add ee to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:ee, "~> 0.0.1"}]
-        end
-
-  2. Ensure ee is started before your application:
-
-        def application do
-          [applications: [:ee]]
-        end
-
+This is a set of Ecto Experiments that I worked through when writing the blog post [Experimenting with Ecto Queries](http://learningelixir.joekain.com/experiments-with-ecto-queries/).
